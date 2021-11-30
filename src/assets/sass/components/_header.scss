@@ -1,0 +1,29 @@
+.poster_header__container {
+  top: 0;
+  z-index: 10;
+  height: map-get($spacing, "xxxl");
+  background: linear-gradient(
+    to bottom right,
+    $x-dark-blue-color,
+    $dark-blue-color 50%
+  );
+  position: relative;
+  &::after {
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    content: "";
+    width: 90%;
+    height: 0.125rem;
+    @include container-setter(
+      0.2rem,
+      0px 0px 8px $cyan-color,
+      2px solid $cyan-color
+    );
+  }
+}
+.poster_p__menu_item {
+  @include fonts-styles($fs-md, $fw-bold, aviny, $white-color);
+}
