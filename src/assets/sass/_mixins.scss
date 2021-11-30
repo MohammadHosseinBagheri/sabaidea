@@ -1,0 +1,65 @@
+/*=============================================
+=            Body mixins            =
+=============================================*/
+
+@mixin mobile {
+  @media screen and(max-width: map-get($breakpoints, 'sm')) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and(min-width:48rem) and(max-width: map-get($breakpoints, 'md')) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and(min-width: map-get($breakpoints,'lg')) {
+    @content;
+  }
+}
+/*=============================================
+=            Container-Box           =
+=============================================*/
+@mixin container-setter($border-radius,$box-shadow,$border){
+  border:$border  ;
+  border-radius: $border-radius ;
+  box-shadow: $box-shadow ;
+}
+/*=============================================
+=            Typography           =
+=============================================*/
+@mixin limit-text($line-number){
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $line-number;
+          line-clamp: $line-number;
+  -webkit-box-orient: vertical;
+}
+@mixin fonts-styles($font-size, $font-weight, $font-family, $color) {
+  font-size: $font-size !important;
+  font-weight: $font-weight !important;
+  font-family: $font-family !important;
+  color: $color !important;
+}
+/*=============================================
+=            Custom Scrollbar           =
+=============================================*/
+@mixin scrollbar {
+  ::-webkit-scrollbar {
+    width: 5px !important;
+  }
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px $dark-blue-color !important;
+    border-radius: 10px !important;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: $cyan-color !important;
+    border-radius: 3px !important;
+  }
+  scrollbar-color:$cyan-color $dark-blue-color ;
+  scrollbar-width: thin;
+}
