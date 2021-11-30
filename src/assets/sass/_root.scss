@@ -1,0 +1,19 @@
+body{
+  background:linear-gradient(to bottom right,$x-dark-blue-color ,$dark-blue-color 50%);
+@include scrollbar;
+}
+.row,p,header{
+  padding: 0;
+  margin: 0
+}
+.btn{
+  outline: none;
+  box-shadow: none;
+  &:focus{
+    outline: none;
+    box-shadow: none;
+  }
+}
+.text-limitation{
+  @include limit-text(2);
+}
