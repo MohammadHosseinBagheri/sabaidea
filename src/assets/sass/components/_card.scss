@@ -1,0 +1,24 @@
+.home_div__card_container{
+  @include container-setter(0.4rem,0px 0px 8px  $cyan-color ,0px solid $cyan-color);
+}
+.home_p__card_title{
+  @include fonts-styles($fs-sm, $fw-normal, aviny, $white-color);
+}
+.home_small__card_header{
+  @include fonts-styles($fs-sm, $fw-bold, aviny, $white-color);
+
+}
+.home_div__menu_side{
+  position: -webkit-sticky;
+  top: 0; position: sticky;
+  height: 150px;
+  overflow: auto;
+  background:$medium-blue-color;
+  &>h3{
+    @include fonts-styles($fs-xmd, $fw-bold, aviny, $yellow-color);
+
+  }
+  &>button{
+    text-align: right;
+  }
+}
